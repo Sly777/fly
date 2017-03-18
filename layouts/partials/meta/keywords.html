@@ -1,0 +1,10 @@
+{{ with .Keywords }}
+  {{ $list := (.Keywords) }}
+  {{ $len := (len $list) }}
+  <meta name="keywords" content="{{ range $index, $element := $list }}{{ . }}{{ if not (eq (add $index 1) $len) }},{{ end }}{{ end }}" />
+{{ end }}
+{{ if and (not (eq .Site.Params.keywords .Keywords)) (not (.Keywords)) }}
+  {{ $list := (.Site.Params.keywords) }}
+  {{ $len := (len $list) }}
+  <meta name="keywords" content="{{ range $index, $element := $list }}{{ . }}{{ if not (eq (add $index 1) $len) }},{{ end }}{{ end }}" />
+{{ end }}

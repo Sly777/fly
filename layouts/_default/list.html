@@ -1,0 +1,15 @@
+{{ define "header" }}
+  {{ partial "components/menu" . }}
+{{ end }}
+{{ define "main" }}
+  <header>
+    <h1>{{ .Title }}</h1>
+  </header>
+  {{ range .Paginator.Pages }}
+    {{ partial "components/page-summary" . }}
+  {{ end }}
+{{ end }}
+{{ define "footer" }}
+  {{ partial "components/pagination" . }}
+  {{ partial "components/powered-by" . }}
+{{ end }}

@@ -1,0 +1,6 @@
+{{ with .Description }}
+  <meta name="description" content="{{ . }}">
+{{ end }}
+{{ if and (not (eq .Site.Params.description .Description)) (eq .Description "") }}
+  <meta name="description" content="{{ .Site.Params.Description }}">
+{{ end }}

@@ -1,0 +1,15 @@
+{{ if .Site.Params.site_verifications.google }}
+  <meta name="google-site-verification" content="{{ .Site.Params.site_verifications.google }}" />
+{{ end }}
+{{ if .Site.Params.site_verifications.bing }}
+  <meta name="msvalidate.01" content="{{ .Site.Params.site_verifications.bing }}">
+{{ end }}
+{{ if .Site.Params.site_verifications.alexa }}
+  <meta name="alexaVerifyID" content="{{ .Site.Params.site_verifications.alexa }}">
+{{ end }}
+{{ if .Site.Params.site_verifications.yandex }}
+  <meta name="yandex-verification" content="{{ .Site.Params.site_verifications.yandex }}">
+{{ end }}
+{{ if .Site.Params.site_verifications.norton }}
+  <meta name="norton-safeweb-site-verification" content="{{ .Site.Params.site_verifications.norton }}" />
+{{ end }}

@@ -1,0 +1,31 @@
+<head>
+  {{ .Hugo.Generator }}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ .Title }}{{ if and (ne .Kind "home") (eq .IsHome false) }} | {{ .Site.Title }}{{ end }}</title>
+  {{ partial "meta/description" . }}
+  {{ partial "meta/keywords" . }}
+  {{ partial "meta/author" . }}
+  {{ template "_internal/opengraph.html" . }}
+  {{ partial "meta/og-image" . }}
+  {{ partial "meta/schemas" . }}
+  {{ if or (eq .Kind "home") (eq .IsHome true) }}
+    {{ partial "components/site-verification" . }}
+  {{ end }}
+  {{ if .RSSLink }}
+    <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+    <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+  {{ end }}
+  <link rel="canonical" href="{{ .Permalink }}">
+  {{ if (isset .Params "prev") }}
+    <link rel="prev" href="{{ .Params.prev }}">
+  {{ end }}
+  {{ if (isset .Params "next") }}
+    <link rel="next" href="{{ .Params.next }}">
+  {{ end }}
+  {{ partial "components/favicon" . }}
+  <link href="{{ .Site.BaseURL }}css/fly.css" rel="stylesheet" />
+  {{ partial "custom-css" . }}
+  {{ partial "custom-header" . }}
+  {{ template "_internal/google_analytics_async.html" . }}
+</head>

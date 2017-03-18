@@ -1,0 +1,40 @@
+{
+  "name": "hugo-fly",
+  "version": "0.0.1",
+  "description": "Fly - Hugo Theme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://ilker.com"
+  },
+  "keywords": [
+    "fly",
+    "hugo",
+    "theme",
+    "travel",
+    "seo"
+  ],
+  "author": "Ilker Guller",
+  "license": "MIT",
+  "devDependencies": {
+    "cssnano": "^3.10.0",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^6.3.0",
+    "gulp-sourcemaps": "^2.4.1",
+    "lost": "^8.0.0",
+    "postcss": "^5.2.16",
+    "postcss-cssnext": "^2.10.0",
+    "postcss-import": "^9.1.0",
+    "postcss-reporter": "^3.0.0",
+    "postcss-url": "^5.1.2",
+    "stylelint": "^7.9.0",
+    "stylelint-config-standard": "^16.0.0",
+    "tachyons": "^4.6.2"
+  },
+  "dependencies": {
+    "normalize.css": "^5.0.0"
+  }
+}

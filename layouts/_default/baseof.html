@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html lang="{{ with $.Site.LanguageCode }}{{ . }}{{ else }}en-us{{ end }}" class="no-js">
+{{ partial "header" . }}
+<body class="fly w-100 sans-serif">
+    <header class="w-100 pa3 ph5-ns mid-gray bg-yellow">{{ block "header" . }}{{ end }}</header>
+    <main>{{ block "main" . }}{{ end }}</main>
+    <footer>{{ block "footer" . }}{{ end }}</footer>
+  </body>
+</html>

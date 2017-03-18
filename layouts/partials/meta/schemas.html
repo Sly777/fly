@@ -1,0 +1,5 @@
+{{ partial "schema/website" . }}
+{{ partial "schema/organization" . }}
+{{ partial "schema/breadcrumb" . }}
+
+{{ if eq .Params.structured.type "Article" }}{{ partial "schema/article" . }}{{ end }}
