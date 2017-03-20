@@ -1,0 +1,15 @@
+<article itemscope itemtype="http://schema.org/CreativeWork" class="pb4 ph3 ph0-l">
+  <div class="flex flex-column flex-row-ns">
+    <div class="w-100 w-60-ns pr3-ns order-2 order-1-ns">
+      <h1 class="f3 mt0 lh-title">{{ .Title }}</h1>
+      <p itemprop="about" class="f5 f4-l lh-copy">
+        {{ .Description }}
+      </p>
+    </div>
+  </div>
+  <a itemprop="url" href="{{ .RelPermalink }}">Devamini gor&nbsp;&raquo;</a>
+  {{ range where .Site.Data.authors.data "id" "=" .Params.authordata }}
+    <p class="f6 lh-copy gray mv0">Kategori: {{ index $.Params.Categories 0 }}, Yazar: <span>{{ .fullname }}</span></p>
+    <time class="f6 db gray">Nov. 21, 2016</time>
+  {{ end }}
+</article>

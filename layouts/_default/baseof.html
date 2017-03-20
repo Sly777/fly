@@ -3,7 +3,8 @@
 {{ partial "header" . }}
 <body class="fly w-100 sans-serif">
     <header class="w-100 pa3 ph5-ns mid-gray bg-yellow">{{ block "header" . }}{{ end }}</header>
-    <main>{{ block "main" . }}{{ end }}</main>
-    <footer>{{ block "footer" . }}{{ end }}</footer>
+    {{ block "mainFull" . }}{{ end }}
+    <main class="bg-white black-70 ph3 ph5-ns mt0-ns mb5-ns pt0-ns pb5">{{ block "main" . }}{{ end }}</main>
+    <footer class="pv2 ph3 ph5-ns gray">{{ block "footer" . }}{{ end }}</footer>
   </body>
 </html>

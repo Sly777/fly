@@ -1,12 +1,29 @@
 {{ define "header" }}
   {{ partial "components/menu" . }}
 {{ end }}
-{{ define "main" }}
-  <header>
-    <h1>{{ .Title }}</h1>
-  </header>
-  {{ .Content }}
+{{ define "mainFull" }}
+  <article>
+    <header class="bg-gold sans-serif">
+      <div class="mw9 center pa4 ph7-l">
+        <time class="f6 mb2 dib ttu tracked"><small>{{ dateFormat "01.01.2006" .Date }}</small></time>
+        <h3 class="f2 f1-m f-headline-l measure-narrow lh-title mv0">
+          <span class="bg-black-90 lh-copy white pa1 tracked-tight">
+            {{ .Title }}
+          </span>
+        </h3>
+        <h4 class="f3 fw1 georgia i mv3">{{ .Description }}</h4>
+        {{ range where .Site.Data.authors.data "id" "=" .Params.authordata }}
+          <h5 class="f6 ttu tracked black-80 ma0">Yazar: <span>{{ .fullname }}</span></h5>
+        {{ end }}
+      </div>
+    </header>
+    <div class="pa4 ph7-l georgia mw9-l center">
+      {{ .Content }}
+    </div>
+  </article>
   {{ partial "components/disqus" . }}
+{{ end }}
+{{ define "main" }}
 {{ end }}
 {{ define "footer" }}
   {{ partial "components/powered-by" . }}

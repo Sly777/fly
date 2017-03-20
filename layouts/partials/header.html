@@ -1,5 +1,6 @@
 <head>
   {{ .Hugo.Generator }}
+  <meta name="generator" content="Fly - Hugo Theme" />
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ .Title }}{{ if and (ne .Kind "home") (eq .IsHome false) }} | {{ .Site.Title }}{{ end }}</title>

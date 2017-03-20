@@ -6,7 +6,7 @@
     <h1>{{ .Title }}</h1>
   </header>
   {{ range .Paginator.Pages }}
-    {{ partial "components/page-summary" . }}
+    {{ partial "components/post-info" . }}
   {{ end }}
 {{ end }}
 {{ define "footer" }}
